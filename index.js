@@ -12,6 +12,10 @@ class contaCorrente{
             this.saldo -= valor;
         }
     }
+
+    depositar(valor){
+        
+    }
 }
 
 const cliente1 = new cliente();
