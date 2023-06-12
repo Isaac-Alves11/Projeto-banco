@@ -1,8 +1,4 @@
-class cliente{
-    nome;
-    cpf;
-    rg;
-}
+
 class contaCorrente{
     agencia;
     //#saldo para campos privados! https://github.com/tc39/proposal-class-fields#private-fields
@@ -16,9 +12,10 @@ class contaCorrente{
     }
 
     depositar(valor){
-        if(valor>0){
-            this.saldo += valor;
+        if(valor < 0){
+           return;
         }
+            this.saldo += valor;
     }
 }
 
@@ -36,6 +33,7 @@ contaCorrenteRicardo.saldo = 0;
 contaCorrenteRicardo.agencia = 1001;
 
 contaCorrenteRicardo.depositar(200);
+
 const valorSacado = contaCorrenteRicardo.sacar(50);
 console.log(valorSacado);
 
