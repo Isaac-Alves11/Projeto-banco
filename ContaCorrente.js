@@ -1,4 +1,4 @@
-class contaCorrente{
+import class contaCorrente{
     agencia;
     //#saldo para campos privados! https://github.com/tc39/proposal-class-fields#private-fields
     _saldo;

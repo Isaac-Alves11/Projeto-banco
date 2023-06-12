@@ -1,4 +1,4 @@
-class cliente{
+export class cliente{
     nome;
     cpf;
     rg;
