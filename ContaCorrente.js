@@ -1,17 +1,24 @@
 export class contaCorrente{
     agencia;
-    cliente;
+    _cliente;
 
     set cliente(novoValor){
         if (novoValor instanceof cliente)
        this._cliente = novoValor;
 
     }
+    get cliente(){
+       return this._cliente;
+    }
 
 
 
     //#saldo para campos privados! https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
+
+    get _saldo(){
+        return this._saldo;
+    }
 
     sacar(valor){
         if(this.saldo >= valor){
